@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Bob Don</title>
+    <title>New Submission</title>
 </head>
 <body>
     <div id="mainContainer">
@@ -104,9 +104,10 @@
             <button><img src="/search.png" alt=""></button>
             
         </form>
-        <section id="songPageBody">
-            <h1>Bob Don Best Versions</h1>
-            <a href="newSubmission"><button id="newBtn">Submit New Version!</button></a>
+        <section id="formPageBody">
+            <form action="/articles" method="post">
+                <%- include('_formFields') %>
+            </form>
         </section>
         <section id="footer">
             <p>headygoose.com, 2023</p>
