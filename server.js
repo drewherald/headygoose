@@ -1,10 +1,13 @@
 const express = require('express');
 const articleRouter = require('./routes/articles');
+const mongoose = require ('mongoose')
 const app = express();
+
+mongoose.connect('mongodb://localhost/headyGoose',{useNewUrlParser: true, useUnifiedTopology: true});
 
 app.set('view engine', 'ejs');
 
-app.use('/articles', articleRouter);
+app.use(express.urlencoded({extended: false}));
 
 app.use( express.static( "photos" ) );
 
@@ -21,3 +24,5 @@ app.get('/', (req,res)=> {
 });
 
 app.listen(1000);
+
+app.use('/pages', articleRouter);

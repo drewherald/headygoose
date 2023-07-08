@@ -78,7 +78,7 @@
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .dropdown:hover .dropbtn {background-color: #6F73D1;}
 
 /* search form */
 
@@ -126,6 +126,21 @@ button, input[type="submit"], input[type="reset"] {
     display: flex;
     padding: 40px 100px 0 100px;
     justify-content: space-between;
+    align-items: center;
+}
+
+#newBtn{
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    height: 70%;
+}
+
+#newBtn:hover{
+    background-color: #6F73D1;
+    cursor: pointer;
 }
 
 /* body left */
@@ -170,4 +185,62 @@ button, input[type="submit"], input[type="reset"] {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* form */
+
+.formGroup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.formGroup2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.formGroup input{
+    width: 250px;
+}
+
+.formGroup select{
+    width: 254px;
+}
+
+#formPageBody{
+    padding: 25px 275px 10px 275px;
+}
+
+#submitButton{
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    height: 70%;
+}
+
+#submitButton:hover{
+    background-color: #6F73D1;
+    cursor: pointer;
+}
+
+#cancelButton{
+    background-color: red;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    height: 70%;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+#cancelButton:hover{
+    background-color: #6F73D1;
+    cursor: pointer;
 }

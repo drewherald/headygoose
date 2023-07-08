@@ -1,6 +1,6 @@
 <div class="formGroup">
     <label for="song">Song:</label>
-    <select id="song" name="song">
+    <select id="song" value="<%= article.song %>" name="song">
         <option value="726">726</option>
         <option value="allineed">All I Need</option>
         <option value="animal">Animal</option>
@@ -76,25 +76,26 @@
 </div>
 
 <div class="formGroup">
-    <label> Show Date:</label>
-    <input type="date" name="showDate" />
+    <label for="date"> Show Date:</label>
+    <input required value = "<%= article.date %>" type="date" name="showDate" />
 </div>
 
 <div class="formGroup">
     <label for="venue">Venue:</label>
-    <input type="text" name="venue" id="venue">
+    <input value="<%= article.venue %>" type="text" name="venue" id="venue">
 </div>
 
 <div class="formGroup">
     <label for="city">City:</label>
-    <input type="text" name="city" id="city">
+    <input value="<%= article.city %>"type="text" name="city" id="city">
 </div>
 
 <div class="formGroup">
     <label for="description">Description:</label>
-    <input type="text" name="description" id="description">
+    <input  value="<%= article.description %>"  type="text" name="description" id="description">
 </div>
 
 <div class="formGroup2">
+    <a href="/" id="cancelButton">Cancel</a>
     <button id="submitButton" type="submit">Submit</button>
 </div>
