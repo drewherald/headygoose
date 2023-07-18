@@ -297,11 +297,16 @@ router.get('/newSubmission', (req,res)=> {
 res.render('pages/newSubmission', {article: new Article()})
 });
 
-router.get('/:id', (req,res)=> {
+router.get('/:id', async (req,res)=> {
+    const article = await Article.findById(req.params.id);
+    if(article==null){
+        res.redirect('/');
+    }
+    res.render(`pages/${article.song}`, {article: article});
 });
 
 router.post('/', async (req,res)=> {
-    const article = new Article({
+    let article = new Article({
         song: req.body.song,
         date: req.body.date,
         venue: req.body.venue,
@@ -310,9 +315,10 @@ router.post('/', async (req,res)=> {
     })
     try{
        article = await article.save();
-       res.redirect(`/pages/${post.id}`)
+       res.redirect(`/pages/${article.id}`);
     }catch(error){
-        res.render('pages/newSubmission', {article: article})
+        console.log(error)
+        res.render('pages/newSubmission', {article: article});
     }
     
 }); 
