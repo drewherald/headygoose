@@ -7,12 +7,14 @@ module.exports = router;
 
 // song pages 
 
-router.get('/726', (req,res)=> {
-    res.render('pages/726')
+router.get('/726', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/726', {articles: articles})
 });
 
-router.get('/allineed', (req,res)=> {
-    res.render('pages/allineed')
+router.get('/allineed', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/allineed', {articles: articles})
 });
 
 router.get('/animal', async (req,res)=> {
@@ -20,60 +22,74 @@ router.get('/animal', async (req,res)=> {
     res.render('pages/animal', {articles: articles})
 });
 
-router.get('/arcadia', (req,res)=> {
-    res.render('pages/arcadia')
+router.get('/arcadia', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/arcadia', {articles: articles})
 });
 
-router.get('/arise', (req,res)=> {
-    res.render('pages/arise')
+router.get('/arise', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/arise', {articles: articles})
 });
 
-router.get('/arrow', (req,res)=> {
-    res.render('pages/arrow')
+router.get('/arrow', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/arrow', {articles: articles})
 });
 
-router.get('/atlasdogs', (req,res)=> {
-    res.render('pages/atlasdogs')
+router.get('/atlasdogs', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/atlasdogs', {articles: articles})
 });
 
-router.get('/awesternsun', (req,res)=> {
-    res.render('pages/awesternsun')
+router.get('/awesternsun', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/awesternsun', {articles: articles})
 });
 
-router.get('/bobdon', (req,res)=> {
-    res.render('pages/bobdon')
+router.get('/bobdon', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/bobdon', {articles: articles})
 });
 
-router.get('/borne', (req,res)=> {
-    res.render('pages/borne')
+router.get('/borne', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/borne', {articles: articles})
 });
 
-router.get('/butterflies', (req,res)=> {
-    res.render('pages/butterflies')
+router.get('/butterflies', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/butterflies', {articles: articles})
 });
 
-router.get('/californiamagic', (req,res)=> {
-    res.render('pages/californiamagic')
+router.get('/californiamagic', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/californiamagic', {articles: articles})
 });
 
-router.get('/creatures', (req,res)=> {
-    res.render('pages/creatures')
+router.get('/creatures', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/creatures', {articles: articles})
 });
 
-router.get('/dimlights', (req,res)=> {
-    res.render('pages/dimlights')
+router.get('/dimlights', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/dimlights', {articles: articles})
 });
 
-router.get('/doobiesong', (req,res)=> {
-    res.render('pages/doobiesong')
+router.get('/doobiesong', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/doobiesong', {articles: articles})
 });
 
-router.get('/dragonfly', (req,res)=> {
-    res.render('pages/dragonfly')
+router.get('/dragonfly', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/dragonfly', {articles: articles})
 });
 
-router.get('/drdarkness', (req,res)=> {
-    res.render('pages/drdarkness')
+router.get('/drdarkness', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/drdarkness', {articles: articles})
 });
 
 router.get('/dripfield', async (req,res)=> {
@@ -81,216 +97,269 @@ router.get('/dripfield', async (req,res)=> {
     res.render('pages/dripfield', {articles: articles})
 });
 
-router.get('/drive', (req,res)=> {
-    res.render('pages/drive')
+router.get('/drive', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/drive', {articles: articles})
 });
 
-router.get('/earthlingoralien', (req,res)=> {
-    res.render('pages/earthlingoralien')
+router.get('/earthlingoralien', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/earthlingoralien', {articles: articles})
 });
 
-router.get('/echoofarose', (req,res)=> {
-    res.render('pages/echoofarose')
+router.get('/echoofarose', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/echoofarose', {articles: articles})
 });
 
-router.get('/elizabeth', (req,res)=> {
-    res.render('pages/elizabeth')
+router.get('/elizabeth', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/elizabeth', {articles: articles})
 });
 
-router.get('/elmegthewise', (req,res)=> {
-    res.render('pages/elmegthewise')
+router.get('/elmegthewise', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/elmegthewise', {articles: articles})
 });
 
-router.get('/everythingmustgo', (req,res)=> {
-    res.render('pages/everythingmustgo')
+router.get('/everythingmustgo', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/everythingmustgo', {articles: articles})
 });
 
-router.get('/feelitnow', (req,res)=> {
-    res.render('pages/feelitnow')
+router.get('/feelitnow', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/feelitnow', {articles: articles})
 });
 
-router.get('/flowdown', (req,res)=> {
-    res.render('pages/flowdown')
+router.get('/flowdown', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/flowdown', {articles: articles})
 });
 
-router.get('/honeybee', (req,res)=> {
-    res.render('pages/honeybee')
+router.get('/honeybee', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/honeybee', {articles: articles})
 });
 
-router.get('/hottea', (req,res)=> {
-    res.render('pages/hottea')
+router.get('/hottea', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/hottea', {articles: articles})
 });
 
-router.get('/hungersite', (req,res)=> {
-    res.render('pages/hungersite')
+router.get('/hungersite', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/hungersite', {articles: articles})
 });
 
-router.get('/indianriver', (req,res)=> {
-    res.render('pages/indianriver')
+router.get('/indianriver', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/indianriver', {articles: articles})
 });
 
-router.get('/intothemyst', (req,res)=> {
-    res.render('pages/intothemyst')
+router.get('/intothemyst', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/intothemyst', {articles: articles})
 });
 
-router.get('/itburnswithin', (req,res)=> {
-    res.render('pages/itburnswithin')
+router.get('/itburnswithin', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/itburnswithin', {articles: articles})
 });
 
-router.get('/jeffengborg', (req,res)=> {
-    res.render('pages/jeffengborg')
+router.get('/jeffengborg', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/jeffengborg', {articles: articles})
 });
 
-router.get('/jive1', (req,res)=> {
-    res.render('pages/jivei')
+router.get('/jive1', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/jivei', {articles: articles})
 });
 
-router.get('/jive2', (req,res)=> {
-    res.render('pages/jiveii')
+router.get('/jive2', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/jiveii', {articles: articles})
 });
 
-router.get('/jivelee', (req,res)=> {
-    res.render('pages/jivelee')
+router.get('/jivelee', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/jivelee', {articles: articles})
 });
 
-router.get('/leadtheway', (req,res)=> {
-    res.render('pages/leadtheway')
+router.get('/leadtheway', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/leadtheway', {articles: articles})
 });
 
-router.get('/leadup', (req,res)=> {
-    res.render('pages/leadup')
+router.get('/leadup', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/leadup', {articles: articles})
 });
 
-router.get('/lifeontheshelf', (req,res)=> {
-    res.render('pages/lifeontheshelf')
+router.get('/lifeontheshelf', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/lifeontheshelf', {articles: articles})
 });
 
-router.get('/lilystiger', (req,res)=> {
-    res.render('pages/lilystiger')
+router.get('/lilystiger', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/lilystiger', {articles: articles})
 });
 
-router.get('/looseends', (req,res)=> {
-    res.render('pages/looseends')
+router.get('/looseends', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/looseends', {articles: articles})
 });
 
-router.get('/madhuvan', (req,res)=> {
-    res.render('pages/madhuvan')
+router.get('/madhuvan', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/madhuvan', {articles: articles})
 });
 
-router.get('/moby', (req,res)=> {
-    res.render('pages/moby')
+router.get('/moby', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/moby', {articles: articles})
 });
 
-router.get('/moonrise', (req,res)=> {
-    res.render('pages/moonrise')
+router.get('/moonrise', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/moonrise', {articles: articles})
 });
 
-router.get('/mraction', (req,res)=> {
-    res.render('pages/mraction')
+router.get('/mraction', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/mraction', {articles: articles})
 });
 
-router.get('/notalone', (req,res)=> {
-    res.render('pages/notalone')
+router.get('/notalone', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/notalone', {articles: articles})
 });
 
-router.get('/pancakes', (req,res)=> {
-    res.render('pages/pancakes')
+router.get('/pancakes', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/pancakes', {articles: articles})
 });
 
-router.get('/redbird', (req,res)=> {
-    res.render('pages/redbird')
+router.get('/redbird', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/redbird', {articles: articles})
 });
 
-router.get('/rockdale', (req,res)=> {
-    res.render('pages/rockdale')
+router.get('/rockdale', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/rockdale', {articles: articles})
 });
 
-router.get('/rosewoodheart', (req,res)=> {
-    res.render('pages/rosewoodheart')
+router.get('/rosewoodheart', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/rosewoodheart', {articles: articles})
 });
 
-router.get('/seekersontheridge', (req,res)=> {
-    res.render('pages/seekersontheridge')
+router.get('/seekersontheridge', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/seekersontheridge', {articles: articles})
 });
 
-router.get('/silverrising', (req,res)=> {
-    res.render('pages/silverrising')
+router.get('/silverrising', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/silverrising', {articles: articles})
 });
 
-router.get('/slowready', (req,res)=> {
-    res.render('pages/slowready')
+router.get('/slowready', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/slowready', {articles: articles})
 });
 
-router.get('/soready', (req,res)=> {
-    res.render('pages/soready')
+router.get('/soready', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/soready', {articles: articles})
 });
 
-router.get('/spiritofthedarkhorse', (req,res)=> {
-    res.render('pages/spiritofthedarkhorse')
+router.get('/spiritofthedarkhorse', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/spiritofthedarkhorse', {articles: articles})
 });
 
-router.get('/thatch', (req,res)=> {
-    res.render('pages/thatch')
+router.get('/thatch', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/thatch', {articles: articles})
 });
 
-router.get('/theemperessoforganos', (req,res)=> {
-    res.render('pages/theemperessoforganos')
+router.get('/theemperessoforganos', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/theemperessoforganos', {articles: articles})
 });
 
-router.get('/thelabyrinth', (req,res)=> {
-    res.render('pages/thelabyrinth')
+router.get('/thelabyrinth', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/thelabyrinth', {articles: articles})
 });
 
-router.get('/theoldmansboat', (req,res)=> {
-    res.render('pages/theoldmansboat')
+router.get('/theoldmansboat', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/theoldmansboat', {articles: articles})
 });
 
-router.get('/thewhales', (req,res)=> {
-    res.render('pages/thewhales')
+router.get('/thewhales', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/thewhales', {articles: articles})
 });
 
-router.get('/thisoldsea', (req,res)=> {
-    res.render('pages/thisoldsea')
+router.get('/thisoldsea', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/thisoldsea', {articles: articles})
 });
 
-router.get('/timetoflee', (req,res)=> {
-    res.render('pages/timetoflee')
+router.get('/timetoflee', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/timetoflee', {articles: articles})
 });
 
-router.get('/travelers', (req,res)=> {
-    res.render('pages/travelers')
+router.get('/travelers', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/travelers', {articles: articles})
 });
 
-router.get('/trevorreadspoetry', (req,res)=> {
-    res.render('pages/trevorreadspoetry')
+router.get('/trevorreadspoetry', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/trevorreadspoetry', {articles: articles})
 });
 
-router.get('/tumble', (req,res)=> {
-    res.render('pages/tumble')
+router.get('/tumble', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/tumble', {articles: articles})
 });
 
-router.get('/turkishhills', (req,res)=> {
-    res.render('pages/turkishhills')
+router.get('/turkishhills', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/turkishhills', {articles: articles})
 });
 
-router.get('/turnedclouds', (req,res)=> {
-    res.render('pages/turnedclouds')
+router.get('/turnedclouds', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/turnedclouds', {articles: articles})
 });
 
-router.get('/whitelights', (req,res)=> {
-    res.render('pages/whitelights')
+router.get('/whitelights', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/whitelights', {articles: articles})
 });
 
-router.get('/wysterialane', (req,res)=> {
-    res.render('pages/wysterialane')
+router.get('/wysterialane', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/wysterialane', {articles: articles})
 });
 
-router.get('/yeti', (req,res)=> {
-    res.render('pages/yeti')
+router.get('/yeti', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/yeti', {articles: articles})
 });
 
-router.get('/yourocean', (req,res)=> {
-    res.render('pages/yourocean')
+router.get('/yourocean', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/yourocean', {articles: articles})
 });
 
 // new submission page
