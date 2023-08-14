@@ -122,12 +122,15 @@ button, input[type="submit"], input[type="reset"] {
     justify-content: space-between;
 }
 
-#songPageBody{
+
+#songPageBody {
     display: flex;
+    flex-direction: column;
     padding: 40px 100px 0 100px;
     justify-content: space-between;
     align-items: center;
 }
+
 
 #newBtn{
     background-color: black;

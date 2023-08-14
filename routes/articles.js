@@ -15,8 +15,9 @@ router.get('/allineed', (req,res)=> {
     res.render('pages/allineed')
 });
 
-router.get('/animal', (req,res)=> {
-    res.render('pages/animal')
+router.get('/animal', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/animal', {articles: articles})
 });
 
 router.get('/arcadia', (req,res)=> {
@@ -75,8 +76,9 @@ router.get('/drdarkness', (req,res)=> {
     res.render('pages/drdarkness')
 });
 
-router.get('/dripfield', (req,res)=> {
-    res.render('pages/dripfield')
+router.get('/dripfield', async (req,res)=> {
+    const articles =  await Article.find();
+    res.render('pages/dripfield', {articles: articles})
 });
 
 router.get('/drive', (req,res)=> {
@@ -297,8 +299,8 @@ router.get('/newSubmission', (req,res)=> {
 res.render('pages/newSubmission', {article: new Article()})
 });
 
-router.get('/:id', async (req,res)=> {
-    const article = await Article.findById(req.params.id);
+router.get('/:slug', async (req,res)=> {
+    const article = await Article.findOne({slug: req.params.slug});
     if(article==null){
         res.redirect('/');
     }
@@ -315,7 +317,7 @@ router.post('/', async (req,res)=> {
     })
     try{
        article = await article.save();
-       res.redirect(`/pages/${article.id}`);
+       res.redirect(`/pages/${article.slug}`);
     }catch(error){
         console.log(error)
         res.render('pages/newSubmission', {article: article});
