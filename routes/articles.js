@@ -172,12 +172,12 @@ router.get('/jeffengborg', async (req,res)=> {
     res.render('pages/jeffengborg', {articles: articles})
 });
 
-router.get('/jive1', async (req,res)=> {
+router.get('/jivei', async (req,res)=> {
     const articles =  await Article.find();
     res.render('pages/jivei', {articles: articles})
 });
 
-router.get('/jive2', async (req,res)=> {
+router.get('/jiveii', async (req,res)=> {
     const articles =  await Article.find();
     res.render('pages/jiveii', {articles: articles})
 });

@@ -108,7 +108,25 @@
         </form>
         <section id="songPageBody">
             <h1>Time To Flee Best Versions</h1>
+            <br>
             <a href="newSubmission"><button id="newBtn">Submit New Version!</button></a>
+            <br>
+            <div>  
+                <% 
+                    const newArt = articles.filter((x) => {
+                    return x.song.toLowerCase() == 'timetoflee' }) 
+                    newArt.forEach(newArt => { %>
+                    <div class="card mt-4">
+                      <div class="card-body">
+                        <h4 class="card-title"><%= newArt.venue %>, <%= newArt.city %></h4>
+                        <div class="card-subtitle text-muted mb-2">
+                          <%= newArt.date %>
+                        </div>
+                        <div class="card-text mb-2"><%= newArt.description %></div>
+                      </div>
+                    </div>
+                  <% }) %>
+            </div>
         </section>
         <section id="footer">
             <p>headygoose.com, 2023</p>
