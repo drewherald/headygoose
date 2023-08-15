@@ -4,16 +4,16 @@ const Article = require('./models/article');
 const mongoose = require ('mongoose')
 const app = express();
 const uri = 'mongodb+srv://drewherald:xMKEkj1GyZz7tet6@cluster0.axqyxaw.mongodb.net/?retryWrites=true&w=majority'
-let songBook = [];
 
 async function connect(){
     try{
         await mongoose.connect(uri);
-        console.log("connected to mongoDB");
+        console.log("connected to mongoDB songPages");
     }catch(error){
         console.log(error);
     }
 }
+
 
 connect();
 

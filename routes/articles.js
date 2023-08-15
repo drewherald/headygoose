@@ -1,9 +1,26 @@
 const express = require('express');
 const Article = require('./../models/article');
 const router = express.Router();
-
+const users = []; //switch to using multiple databases via connection with useDB command 
 module.exports = router;
+const bcrypt = require('bcrypt')
+const passport = require('passport')
+const flash = require('express-flash')
+const session = require('express-session')
+const app = express();
 
+
+const initializePassport = require('./../passport-config')
+/*initializePassport(
+    passport, 
+    email => users.find(user => user.email === email)
+}) */
+
+app.use(flash())
+app.use(session({resave: true,
+    saveUninitialized: true,
+    secret: process.env.SESSION_SECRET
+}))
 
 // song pages 
 
@@ -361,6 +378,33 @@ router.get('/yourocean', async (req,res)=> {
     const articles =  await Article.find();
     res.render('pages/yourocean', {articles: articles})
 });
+
+// login pages
+
+router.get('/login', (req,res)=> {
+    res.render('pages/login')
+});
+
+router.get('/register', (req,res)=> {
+    res.render('pages/register')
+});
+
+router.post('/login', (req,res) =>{
+
+})
+
+router.post('/register', async (req,res) =>{
+    try{
+        const hashedPassword = await bcrypt.hash(req.body.password, 10)
+        users.push({
+            id: Date.now.toString(), //when upgrade to DB this will be rng
+            username: req.body.email,
+            password: hashedPassword
+        })
+        res.redirect('login')
+    }catch(error){
+        res.redirect('register')
+    }console.log(users)})
 
 // new submission page
 

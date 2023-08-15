@@ -253,3 +253,32 @@ button, input[type="submit"], input[type="reset"] {
     cursor: pointer;
 }
 
+/* login */
+
+.loginFormGroup{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.loginFormGroup div{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.loginFormGroup div label{
+    padding-right: 25px;
+}
+
+
+
+#loginPageBody {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 100px 0 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
