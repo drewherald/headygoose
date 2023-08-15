@@ -218,6 +218,11 @@ button, input[type="submit"], input[type="reset"] {
     padding: 25px 275px 10px 275px;
 }
 
+#errorPageBody{
+    padding: 25px 275px 10px 275px;
+    text-align: center;
+}
+
 #submitButton{
     background-color: black;
     color: white;

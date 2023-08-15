@@ -384,12 +384,25 @@ router.post('/', async (req,res)=> {
         city: req.body.city,
         description: req.body.description,
     })
-    try{
-       article = await article.save();
-       res.redirect(`/pages/${article.slug}`);
-    }catch(error){
-        console.log(error)
-        res.render('pages/newSubmission', {article: article});
+
+    let checker = true;
+    const articles =  await Article.find();
+    articles.forEach(element => {
+        if(element.song.toLowerCase() == article.song.toLowerCase() && element.date === article.date){
+            checker = false;
+        }
+    });
+
+    if(checker){
+        try{
+            article = await article.save();
+            res.redirect(`/pages/${article.slug}`);
+         }catch(error){
+             console.log(error)
+             res.render('pages/newSubmission', {article: article});
+         }
+    }else{
+        res.render('pages/alreadyExist', {article: article});
     }
     
 }); 

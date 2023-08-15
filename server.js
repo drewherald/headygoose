@@ -32,46 +32,6 @@ app.get('/', async (req,res)=> {
     res.render('pages/index', {articles: articles})
 }); 
 
-
-
-app.get("/animal", function (req, res) {
-    var characters = [
-        {
-          name: 'Harry',
-          designation: "Student"
-        },
-        {
-          name: 'Dumbledore',
-          designation: "Headmaster"
-        },
-        {
-          name: 'Snape',
-          designation: "Professor"
-        },
-        {
-          name: 'Hermione',
-          designation: "Student"
-        }
-         ];
-      var subheading = "I though we should involve some magic";
-    res.render("animal", {
-        characters: characters,
-        subheading: subheading
-      });
-  });
-
-/*app.get('/animal', async (req,res)=> {
-    const articles = await Article.find();
-    console.log(articles);
-    /*const animalArticles = [];
-    articles.forEach(element => {
-        if (element.song.valueOf()=="animal"){
-            animalArticles.push(element)
-        }
-    });
-    res.render('pages/animal', {articles: articles})
-}); */
-
 app.listen(2000);
 
 app.use('/pages', articleRouter);
