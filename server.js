@@ -4,7 +4,6 @@ const Article = require('./models/article');
 const mongoose = require ('mongoose')
 const app = express();
 const uri = 'mongodb+srv://drewherald:xMKEkj1GyZz7tet6@cluster0.axqyxaw.mongodb.net/?retryWrites=true&w=majority'
-let songBook = [];
 
 async function connect(){
     try{
@@ -36,6 +35,27 @@ app.listen(2000);
 
 app.use('/pages', articleRouter);
 
-//filter for each page
+//login
+
+const bcrypt = require('bcrypt')
+const users = []
+
+app.post('/login', (req,res)=> {
+    
+})
+
+app.post('/register', async (req,res)=> {
+    try{
+        const hashedPassword = await bcrypt(req.body.password, 10)
+        users.push({
+            id: Date.now().toString(),
+            email: req.body.email,
+            password: hashedPasssword
+        })
+        res.redirect('/login')
+    }catch(e){
+
+    }
+})
 
 
