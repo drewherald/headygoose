@@ -362,6 +362,16 @@ router.get('/yourocean', async (req,res)=> {
     res.render('pages/yourocean', {articles: articles})
 });
 
+//login
+
+router.get('/login', (req,res)=> {
+    res.render('pages/login', )
+});
+
+router.get('/register', (req,res)=> {
+    res.render('pages/register')
+});
+
 // new submission page
 
 router.get('/newSubmission', (req,res)=> {
